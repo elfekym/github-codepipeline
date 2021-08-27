@@ -67,8 +67,8 @@ If you have any questions, comments, additions or suggestions please feel free t
 ## Questions, Comments, additions
 If you have any Questions, comments regarding serverless components implemented here get back to me via twitter at [@elfekym99](https://twitter.com/elfekym99) . 
 
-# First Step : 
-Adding a Lambda (Done)
+### Playground : 
+- Add a Lambda (Done)
 In [`application.yaml`](./application.yaml)) added the following code snippet for adding lambda resource along with its Role 
 ![LambdaFunction](images/lambda_added.png "Example of a successful execution")
 
