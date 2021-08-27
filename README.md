@@ -67,6 +67,9 @@ If you have any questions, comments, additions or suggestions please feel free t
 ## Questions, Comments, additions
 If you have any Questions, comments regarding serverless components implemented here get back to me via twitter at [@elfekym99](https://twitter.com/elfekym99) . 
 
-## TODO
-
-* Refine IAM permissions in pipeline.yaml
+# First Step : 
+Adding a Lambda (Done)
+1-You can navigate to aws lambda functions (specifying the proper region). 
+2-find the lambda named 'LambdaFunction'.
+3-create an empty test.
+4-Check the result string
