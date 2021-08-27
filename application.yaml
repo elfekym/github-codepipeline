@@ -7,3 +7,16 @@ Description: github-codepipeline-app
 Resources:
   ApplicationBucket:
     Type: AWS::S3::Bucket
+
+  ExtractApiKeyValue:
+    Type: AWS::Lambda::Function
+    Properties:
+      Handler: index.handler
+      Runtime: nodejs12.x
+      Timeout: 30
+      Code:
+        ZipFile: |
+          const AWS = require('aws-sdk')
+          exports.handler = function (event, context) {
+            print(event);
+          }
