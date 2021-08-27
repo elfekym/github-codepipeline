@@ -1,4 +1,4 @@
-# GitHub CodePipeline example
+# GitHub CodePipeline, Lambda example
 
 This is a "walking skeleton" application that you can modify to create a Continuous Delivery / Continuous Deployment (CD) Pipeline
 with [AWS CodePipeline](https://aws.amazon.com/codepipeline/), and [GitHub](https://github.com/) as a source repository provider.
