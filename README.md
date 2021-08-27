@@ -69,6 +69,9 @@ If you have any Questions, comments regarding serverless components implemented 
 
 # First Step : 
 Adding a Lambda (Done)
+In [`application.yaml`](./application.yaml)) added the following code snippet for adding lambda resource along with its Role 
+![LambdaFunction](images/lambda_added.png "Example of a successful execution")
+
 1-You can navigate to aws lambda functions (specifying the proper region). 
 2-find the lambda named 'LambdaFunction'.
 3-create an empty test.
