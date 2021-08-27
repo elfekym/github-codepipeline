@@ -12,7 +12,6 @@ Resources:
   LambdaRole:
     Type: AWS::IAM::Role
     Properties:
-      RoleName: LambdaRole
       AssumeRolePolicyDocument:
         Statement:
           - Effect: Allow
