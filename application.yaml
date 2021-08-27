@@ -8,15 +8,27 @@ Resources:
   ApplicationBucket:
     Type: AWS::S3::Bucket
 
-  ExtractApiKeyValue:
+
+  LambdaRole:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: LambdaRole
+      AssumeRolePolicyDocument:
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service: lambda.amazonaws.com
+            Action: sts:AssumeRole
+
+  LambdaFunction:
     Type: AWS::Lambda::Function
     Properties:
-      Handler: index.handler
-      Runtime: nodejs12.x
-      Timeout: 30
+      FunctionName: LambdaFunction
+      Role: !GetAtt LambdaRole.Arn
+      Runtime: python3.7
+      Handler: index.my_handler
       Code:
         ZipFile: |
-          const AWS = require('aws-sdk')
-          exports.handler = function (event, context) {
-            print(event);
-          }
+          def my_handler(event, context):
+            message = 'Hello Lambda World!'
+            return message
