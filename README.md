@@ -1,6 +1,9 @@
 # GitHub CodePipeline, Lambda example
 
-This is a "walking skeleton" application that you can modify to create a Continuous Delivery / Continuous Deployment (CD) Pipeline
+This is a playground based repo, for providing examples for different Serverless Features that AWS Can provide using it's automated Pipeline integration with github.
+
+
+This is an application that you can modify to create a Continuous Delivery / Continuous Deployment (CD) Pipeline
 with [AWS CodePipeline](https://aws.amazon.com/codepipeline/), and [GitHub](https://github.com/) as a source repository provider.
 
 CD Pipelines define the application to be deployed using an ["Infrastructure as Code"](https://en.wikipedia.org/wiki/Infrastructure_as_code) (IaC) strategy, and in our case we use [AWS CloudFormation](https://aws.amazon.com/cloudformation/) as our IaC tool. The definition of the application to be deployed can be found in the [`application.yaml`](./application.yaml) template.
@@ -58,10 +61,11 @@ If you need to change the structure of the CodePipeline itself then run `update-
 1. Delete the pipeline stack
 
 ## Questions, Comments, Additions, Suggestions
-
+## Original [For pipeline original questions]
 If you have any questions, comments, additions or suggestions please feel free to comment through GitHub, on twitter at [@mikebroberts](https://twitter.com/mikebroberts), or via email at mike@symphonia.io.
 
-If your company is looking for help using CodePipeline, CloudFormation, or architecture using AWS then please contact us at [Symphonia](https://www.symphonia.io/).
+## Questions, Comments, additions
+If you have any Questions, comments regarding serverless components implemented here get back to me via twitter at [@elfekym99](https://twitter.com/elfekym99) . 
 
 ## TODO
 
