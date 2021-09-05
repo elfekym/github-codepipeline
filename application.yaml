@@ -31,3 +31,24 @@ Resources:
           def my_handler(event, context):
             message = 'Hello Lambda World!'
             return message
+  
+  S3UpdateListener:
+    Type: AWS::Lambda::Function
+    Properties:
+      FunctionName: S3Consumer
+      Handler: index.handler
+      Runtime: nodejs12.x
+      CodeUri: ./
+      Policies:
+        - AWSLambdaExecute      
+      Events:
+        S3Update:
+          Type: S3
+          Properties:
+            Bucket: !Ref DemoBucket
+            Events: s3:ObjectCreated:*
+
+  DemoBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: 'my-demo-bucket'
