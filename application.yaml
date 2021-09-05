@@ -1,4 +1,5 @@
 AWSTemplateFormatVersion: '2010-09-09'
+Transform: 'AWS::Serverless-2016-10-31'
 # *** Change this to something useful for you!
 Description: github-codepipeline-app
 
@@ -7,7 +8,6 @@ Description: github-codepipeline-app
 Resources:
   ApplicationBucket:
     Type: AWS::S3::Bucket
-
 
   LambdaRole:
     Type: AWS::IAM::Role
@@ -33,22 +33,21 @@ Resources:
             return message
   
   S3UpdateListener:
-    Type: AWS::Lambda::Function
+    Type: AWS::Serverless::Function
     Properties:
-      FunctionName: S3Consumer
       Handler: index.handler
       Runtime: nodejs12.x
       CodeUri: ./
       Policies:
-        - AWSLambdaExecute      
+        - AWSLambdaExecute
       Events:
         S3Update:
           Type: S3
           Properties:
             Bucket: !Ref DemoBucket
             Events: s3:ObjectCreated:*
-
+  
   DemoBucket:
     Type: AWS::S3::Bucket
     Properties:
-      BucketName: 'my-cloudformation-demo-bucket-lambda'
+      BucketName: 'my-demo-bucket'
