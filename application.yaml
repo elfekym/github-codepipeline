@@ -36,8 +36,11 @@ Resources:
     Type: AWS::Serverless::Function
     Properties:
       Handler: index.handler
-      Runtime: nodejs12.x
-      CodeUri: ./index.js
+      Runtime: python3.6
+      InlineCode: |
+        def handler(event, context):
+          print("Hello, world!")
+          print(event)
       Policies:
         - AWSLambdaExecute
       Events:
