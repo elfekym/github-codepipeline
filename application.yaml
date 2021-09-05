@@ -51,4 +51,4 @@ Resources:
   DemoBucket:
     Type: AWS::S3::Bucket
     Properties:
-      BucketName: 'my-demo-bucket'
+      BucketName: 'my-cloudformation-demo-bucket-lambda'
