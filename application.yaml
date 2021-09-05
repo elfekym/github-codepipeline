@@ -37,7 +37,7 @@ Resources:
     Properties:
       Handler: index.handler
       Runtime: nodejs12.x
-      CodeUri: ./
+      CodeUri: ./index.js
       Policies:
         - AWSLambdaExecute
       Events:
